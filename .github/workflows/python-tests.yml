@@ -22,5 +22,6 @@ jobs:
 
       - name: Définir le PYTHONPATH et lancer les tests
         run: |
-          export PYTHONPATH=$PWD
+          export "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV
+          
           pytest
